@@ -1,19 +1,17 @@
-package com.gecharita.anemic.service;
+package com.gecharita.hexagonal.domain.service;
 
-import com.gecharita.anemic.model.Person;
-import com.gecharita.anemic.repository.PersonRepository;
-import org.springframework.stereotype.Service;
+import com.gecharita.hexagonal.domain.Person;
+import com.gecharita.hexagonal.domain.repository.PersonRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-@Service
-public class PersonServiceImpl implements PersonService {
+public class DomainPersonService implements PersonService {
 
     private final PersonRepository personRepository;
 
-    public PersonServiceImpl(PersonRepository personRepository){
+    public DomainPersonService(PersonRepository personRepository){
         this.personRepository = personRepository;
     };
 

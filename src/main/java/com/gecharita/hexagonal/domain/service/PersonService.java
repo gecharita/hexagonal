@@ -1,7 +1,6 @@
-package com.gecharita.anemic.service;
+package com.gecharita.hexagonal.domain.service;
 
-import com.gecharita.anemic.model.Person;
-
+import com.gecharita.hexagonal.domain.Person;
 import java.util.List;
 
 public interface PersonService {

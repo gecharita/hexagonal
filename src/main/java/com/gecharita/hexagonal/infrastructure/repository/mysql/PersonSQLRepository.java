@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Component
-@Primary
+//@Primary
 public class PersonSQLRepository implements PersonRepository {
 
     private final SpringDataPersonSQLRepository personRepository;

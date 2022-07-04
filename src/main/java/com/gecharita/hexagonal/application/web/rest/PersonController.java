@@ -25,13 +25,12 @@ public class PersonController {
         this.personService = personService;
     }
 
-//    @GetMapping()
-//    public ResponseEntity<List<PersonDTO>> getAll(){
-//        LOGGER.info("getAll");
-//        List<PersonEntity> personList = personService.findAll();
-//        List<PersonDTO> personDTOList = personList.stream().map(personMapper::toPersonDTO).collect(Collectors.toList());
-//        return  ResponseEntity.ok(personDTOList);
-//    }
+    @GetMapping()
+    public ResponseEntity<List<Person>> getAll(){
+        LOGGER.info("getAll");
+        List<Person> persons = personService.findAll();
+        return  ResponseEntity.ok(persons);
+    }
 
     @PostMapping("")
     public ResponseEntity<CreatePersonResponse> createPerson(@RequestBody CreatePersonRequest createPersonRequest){

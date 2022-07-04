@@ -5,10 +5,12 @@ import lombok.Data;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 @javax.persistence.Entity
 @Data
+@Table(name = "Person" )
 public class PersonEntity implements Serializable {
     @Id
     @GeneratedValue

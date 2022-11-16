@@ -1,4 +1,4 @@
-package com.gecharita.hexagonal.domain;
+package com.gecharita.hexagonal.core.domain;
 
 import java.util.Calendar;
 

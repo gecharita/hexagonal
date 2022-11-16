@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackageClasses = DDDApplication.class)
 public class BeanConfig {
     @Bean
-    PersonInPort personService(final PersonOutPort personRepository) {
-        return new PersonService(personRepository);
+    PersonInPort personInPort(final PersonOutPort personOutPort) {
+        return new PersonService(personOutPort);
     }
 }

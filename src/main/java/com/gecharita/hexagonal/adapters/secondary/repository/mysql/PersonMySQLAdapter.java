@@ -13,9 +13,9 @@ import java.util.stream.StreamSupport;
 @Primary
 public class PersonMySQLAdapter implements PersonOutPort {
 
-    private final SpringDataPersonSQLRepository personRepository;
+    private final PersonRepository personRepository;
 
-    public PersonMySQLAdapter(final SpringDataPersonSQLRepository personRepository) {
+    public PersonMySQLAdapter(final PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
     @Override

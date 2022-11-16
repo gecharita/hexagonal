@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
-@Primary
+//@Component
+//@Primary
 public class CustomerFileAdapter implements PersonOutPort {
     private static final String FILE = "customers.dat";
     @Override

@@ -1,6 +1,6 @@
-package com.gecharita.hexagonal.infrastructure.repository.mysql;
+package com.gecharita.hexagonal.adapters.secondary.repository.mysql;
 
-import com.gecharita.hexagonal.domain.Person;
+import com.gecharita.hexagonal.core.domain.Person;
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;

@@ -1,19 +1,17 @@
-package com.gecharita.hexagonal.infrastructure.repository.file;
+package com.gecharita.hexagonal.adapters.secondary.repository.file;
 
-import com.gecharita.hexagonal.domain.Person;
-import com.gecharita.hexagonal.domain.repository.PersonRepository;
-import org.springframework.context.annotation.Primary;
+import com.gecharita.hexagonal.core.domain.Person;
+import com.gecharita.hexagonal.core.outport.PersonOutPort;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-@Primary
-public class CustomerFileRepository implements PersonRepository {
+//@Primary
+public class CustomerFileAdapter implements PersonOutPort {
     private static final String FILE = "customers.dat";
     @Override
     public List<Person> findAll() {

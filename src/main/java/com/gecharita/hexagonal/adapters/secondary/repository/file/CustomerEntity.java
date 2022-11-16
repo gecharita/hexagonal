@@ -1,11 +1,8 @@
-package com.gecharita.hexagonal.infrastructure.repository.file;
+package com.gecharita.hexagonal.adapters.secondary.repository.file;
 
-import com.gecharita.hexagonal.domain.Person;
+import com.gecharita.hexagonal.core.domain.Person;
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 import java.io.Serializable;
 
 @Data

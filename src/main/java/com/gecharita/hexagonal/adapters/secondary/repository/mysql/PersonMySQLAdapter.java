@@ -1,9 +1,8 @@
-package com.gecharita.hexagonal.infrastructure.repository.mysql;
+package com.gecharita.hexagonal.adapters.secondary.repository.mysql;
 
-import com.gecharita.hexagonal.domain.Person;
-import com.gecharita.hexagonal.domain.repository.PersonRepository;
+import com.gecharita.hexagonal.core.domain.Person;
+import com.gecharita.hexagonal.core.outport.PersonOutPort;
 import org.springframework.context.annotation.Primary;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,12 +10,12 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Component
-//@Primary
-public class PersonSQLRepository implements PersonRepository {
+@Primary
+public class PersonMySQLAdapter implements PersonOutPort {
 
     private final SpringDataPersonSQLRepository personRepository;
 
-    public PersonSQLRepository(final SpringDataPersonSQLRepository personRepository) {
+    public PersonMySQLAdapter(final SpringDataPersonSQLRepository personRepository) {
         this.personRepository = personRepository;
     }
     @Override

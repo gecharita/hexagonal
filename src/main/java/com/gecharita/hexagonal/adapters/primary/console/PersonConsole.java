@@ -26,7 +26,7 @@ public class PersonConsole implements CommandLineRunner {
 
     @Override
 	public void run(String... args) throws Exception {
-        System.out.println("Enter person (name-address-age)");
+        System.out.println("**** Enter person (name-address-age) ****");
         try (Scanner scanner = new Scanner(System.in)) {
             String personData = scanner.nextLine();
             LOG.info(personData);

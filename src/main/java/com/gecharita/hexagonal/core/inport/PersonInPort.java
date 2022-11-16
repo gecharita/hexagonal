@@ -4,9 +4,9 @@ import com.gecharita.hexagonal.core.domain.Person;
 import java.util.List;
 
 public interface PersonInPort {
-    List<Person> findAll();
+    List<Person> getPersons();
 
-    Person findFirst();
+    Person getFirstPerson();
 
     Person save(Person person);
 }

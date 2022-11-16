@@ -21,7 +21,7 @@ public class PersonController {
     @GetMapping()
     public ResponseEntity<List<Person>> getAll(){
         LOGGER.info("getAll");
-        List<Person> persons = personInPort.findAll();
+        List<Person> persons = personInPort.getPersons();
         return  ResponseEntity.ok(persons);
     }
 

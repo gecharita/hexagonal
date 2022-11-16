@@ -5,26 +5,25 @@ import com.gecharita.hexagonal.core.outport.PersonOutPort;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @Component
-public class PersonService implements PersonInPort {
+public class PersonLogic implements PersonInPort {
 
     private final PersonOutPort personOutPort;
 
-    public PersonService(PersonOutPort personOutPort){
+    public PersonLogic(PersonOutPort personOutPort){
         this.personOutPort = personOutPort;
     };
 
     @Override
-    public List<Person> findAll() {
+    public List<Person> getPersons() {
         return personOutPort.findAll();
     }
 
     @Override
-    public Person findFirst() {
-        return personOutPort.findAll().iterator().next();
+    public Person getFirstPerson() {
+        List<Person> personList = personOutPort.findAll();
+        return personList.isEmpty() ? null : personList.get(0) ;
     }
 
     @Override

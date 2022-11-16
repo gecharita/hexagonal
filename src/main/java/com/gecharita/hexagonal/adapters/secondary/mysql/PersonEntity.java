@@ -1,12 +1,19 @@
-package com.gecharita.hexagonal.adapters.secondary.repository.file;
+package com.gecharita.hexagonal.adapters.secondary.mysql;
 
 import com.gecharita.hexagonal.core.domain.Person;
 import lombok.Data;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@javax.persistence.Entity
 @Data
-public class CustomerEntity implements Serializable {
+@Table(name = "Person" )
+public class PersonEntity implements Serializable {
+    @Id
+    @GeneratedValue
     private Long id;
     private String name;
     private int phone;
@@ -14,9 +21,9 @@ public class CustomerEntity implements Serializable {
     private String country;
     private int age;
 
-    public CustomerEntity(){ }
+    public PersonEntity(){ }
 
-    public CustomerEntity(Person person){
+    public PersonEntity(Person person){
         this.name = person.getName();
         this.phone = person.getPhone();
         this.address = person.getAddress();

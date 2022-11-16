@@ -1,4 +1,4 @@
-package com.gecharita.hexagonal.adapters.secondary.repository.mysql;
+package com.gecharita.hexagonal.adapters.secondary.mysql;
 
 import com.gecharita.hexagonal.core.domain.Person;
 import com.gecharita.hexagonal.core.outport.PersonOutPort;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @Component
-@Primary
+//@Primary
 public class PersonMySQLAdapter implements PersonOutPort {
 
     private final PersonRepository personRepository;

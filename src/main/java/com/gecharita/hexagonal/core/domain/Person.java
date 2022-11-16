@@ -12,7 +12,7 @@ public class Person {
 
     private int yearOfBirth;
 
-//    private Person() {}
+    private Person() {}
 
     public Person(Long id, String name, int phone, String address, String country, int age) {
         this.id = id;

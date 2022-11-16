@@ -2,11 +2,13 @@ package com.gecharita.hexagonal.core.domain;
 
 import com.gecharita.hexagonal.core.inport.PersonInPort;
 import com.gecharita.hexagonal.core.outport.PersonOutPort;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+@Component
 public class PersonService implements PersonInPort {
 
     private final PersonOutPort personOutPort;
@@ -17,7 +19,7 @@ public class PersonService implements PersonInPort {
 
     @Override
     public List<Person> findAll() {
-        return StreamSupport.stream(personOutPort.findAll().spliterator(),false).collect(Collectors.toList());
+        return personOutPort.findAll();
     }
 
     @Override

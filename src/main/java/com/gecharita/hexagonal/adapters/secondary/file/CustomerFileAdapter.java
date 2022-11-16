@@ -1,7 +1,8 @@
-package com.gecharita.hexagonal.adapters.secondary.repository.file;
+package com.gecharita.hexagonal.adapters.secondary.file;
 
 import com.gecharita.hexagonal.core.domain.Person;
 import com.gecharita.hexagonal.core.outport.PersonOutPort;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-//@Primary
+@Primary
 public class CustomerFileAdapter implements PersonOutPort {
     private static final String FILE = "customers.dat";
     @Override

@@ -1,4 +1,4 @@
-package com.gecharita.hexagonal.adapters.secondary.repository.mysql;
+package com.gecharita.hexagonal.adapters.secondary.mysql;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
